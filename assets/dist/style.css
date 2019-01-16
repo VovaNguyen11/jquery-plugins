@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700");
+.header {
+  padding: 50px 0;
+  background: #221F1F;
+  text-align: center;
+  box-shadow: 0 5px 50px #7c7c7c; }
+  .header__title {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333333;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #e50914; }
+
+.plugin {
+  padding: 30px 20px; }
+  .plugin__heading {
+    margin: 0 0 30px;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: .2em; }
+  .plugin__link {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333333;
+    font-weight: 600;
+    font-size: 32px;
+    text-decoration: none; }
+    .plugin__link:hover {
+      color: #f04040; }
+  .plugin:nth-child(odd) {
+    background-color: #eeeeee; }
+
+.social__link {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  color: #3169B3; }
+  .social__link::before {
+    margin-right: 10px; }
+  .social__link--git::before {
+    content: url("../img/icon-github.png"); }
+  .social__link:hover {
+    color: #f04040; }
+
+.zoom-gallery {
+  display: flex;
+  margin-bottom: 20px; }
+  .zoom-gallery__item {
+    flex-basis: 20%;
+    margin-right: 20px; }
+    .zoom-gallery__item:last-child {
+      margin-right: 0; }
+    .zoom-gallery__item:hover {
+      transform: scale(1.1);
+      transition: all .2s ease-out; }
+  .zoom-gallery__img {
+    width: 100%;
+    height: 100%;
+    display: block; }
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1; }
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0; }

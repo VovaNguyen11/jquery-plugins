@@ -1,0 +1,49 @@
+.zoom-gallery {
+    display: flex;
+    margin-bottom: 20px;
+    &__item {
+        flex-basis: 20%;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+            transition: all .2s ease-out; 
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}

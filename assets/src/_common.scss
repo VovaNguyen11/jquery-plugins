@@ -1,0 +1,56 @@
+.header {
+    padding: 50px 0;
+    background: #221F1F;
+    text-align: center;
+    box-shadow: 0 5px 50px #7c7c7c;
+
+    &__title {
+        @include font-main(50px, 700);
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        color: #e50914;
+    }
+}
+
+.plugin {
+    padding: 30px 20px;
+
+    &__heading {
+        margin: 0 0 30px;
+        border-bottom: 1px solid #d1d1d1;
+        padding-bottom: .2em;
+    }
+    
+    &__link{
+        @include font-main(32px, 600);
+        text-decoration: none;
+        &:hover{
+            color: $link-hover;
+        }
+    }
+
+    &:nth-child(odd) {
+        background-color: #eeeeee;
+    }
+}
+
+.social {
+    &__link {
+        @include font-main(16px, 400);
+        display: inline-flex;
+        align-items: center;
+        color: $link-color;
+
+        &::before {
+            margin-right: 10px;
+        }
+
+        &--git::before {
+            content: url('../img/icon-github.png');
+        }
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}

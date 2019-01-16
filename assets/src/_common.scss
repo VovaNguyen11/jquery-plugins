@@ -1,14 +1,29 @@
+.nav {
+    &__item {
+        display: inline-block;
+        @include font-main(16px, 400);
+        text-decoration: none;
+        padding: 15px 20px;
+
+        &:hover {
+            background-color: $main-bg;
+            color: $link-hover;
+            transition: .3s ease;
+        }
+    }
+}
+
 .header {
-    padding: 50px 0;
-    background: #221F1F;
+    padding: 150px 0;
+    background: $main-bg;
     text-align: center;
-    box-shadow: 0 5px 50px #7c7c7c;
+    box-shadow: 0 15px 40px #7c7c7c;
 
     &__title {
-        @include font-main(50px, 700);
+        @include font-title(50px, 700);
         text-transform: uppercase;
         letter-spacing: 2.5px;
-        color: #e50914;
+        color: $main-heading
     }
 }
 
@@ -20,21 +35,29 @@
         border-bottom: 1px solid #d1d1d1;
         padding-bottom: .2em;
     }
-    
-    &__link{
-        @include font-main(32px, 600);
+
+    &__link {
+        @include font-title(32px, 600);
         text-decoration: none;
-        &:hover{
+
+        &:hover,
+        &:focus {
             color: $link-hover;
         }
     }
 
-    &:nth-child(odd) {
-        background-color: #eeeeee;
+    &:focus {
+        outline: none;
+    }
+
+    &:nth-child(even) {
+        background-color: $alt-bg;
     }
 }
 
 .social {
+    margin-top: 20px;
+
     &__link {
         @include font-main(16px, 400);
         display: inline-flex;
@@ -49,7 +72,8 @@
             content: url('../img/icon-github.png');
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $link-hover;
         }
     }

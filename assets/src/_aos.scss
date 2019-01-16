@@ -1,0 +1,40 @@
+
+.effect {
+    width: 50%;
+    border: 0.75em solid white;
+    float: left;
+    background: rgba(0, 0, 0, 0.065);
+    box-sizing: border-box;
+
+    &s {
+        list-style: none;
+        height: 300px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 300px;
+        padding: 0;
+    }
+
+    &_box {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding: 0 0 100% 0;
+
+        &_opacity {
+            background: #606060;
+        }
+
+        &_scale {
+            background: #2b82d9;
+        }
+
+        &_rotate {
+            background: #d92b2b;
+        }
+
+        &_translate {
+            background: #93ca3a;
+        }
+    }
+}

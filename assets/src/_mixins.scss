@@ -1,7 +1,13 @@
-@mixin font-main($size, $weight) {
-    font-family: 'Josefin Sans', sans-serif;
+@mixin font-title($size, $weight) {
+    font-family: 'Montserrat', sans-serif;
     color: $main-font;
     font-weight: $weight;
     font-size: $size;
+}
 
+@mixin font-main($size, $weight) {
+    font-family: 'Hind', sans-serif;
+    color: $main-font;
+    font-weight: $weight;
+    font-size: $size;
 }

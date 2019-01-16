@@ -6,6 +6,7 @@
     <title>jQuery Plugins Examples</title>
     <!-- Plugins Styles -->
     <link rel="stylesheet" href="assets/libs/magnfic-popups/magnific-popup.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Normalize -->
     <link rel="stylesheet" href="assets/common/normalize.css">
     <!-- Custom Styles -->
@@ -38,16 +39,40 @@
             </div>
         </div>
         <div class="social">
-            <a href="https://github.com/dimsemenov/Magnific-Popup" class="social__link social__link--git">Git Hub</a>
+            <a href="https://github.com/dimsemenov/Magnific-Popup" class="social__link social__link--git">GitHub</a>
+        </div>
+    </section>
+    <section class="plugin" id="aos">
+        <h2 class="plugin__heading"><a href="https://michalsnik.github.io/aos/" target="_blank" class="plugin__link">Animate On Scroll</a></h2>
+        <div class="plugin__content">
+            <ul class="effects plain clearfix ">
+                <li class="effect">
+                    <div class="effect_box effect_box_opacity" data-aos="fade" ></div>
+                </li>
+                <li class="effect">
+                    <div class="effect_box effect_box_scale" data-aos="zoom-in"></div>
+                </li>
+                <li class="effect">
+                    <div class="effect_box effect_box_rotate" data-aos="flip-left"></div>
+                </li>
+                <li class="effect">
+                    <div class="effect_box effect_box_translate" data-aos="slide-up"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://github.com/michalsnik/aos" class="social__link social__link--git">GitHub</a>
         </div>
     </section>
     
+
     <!-- API -->
     <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/magnfic-popups/jquery.magnific-popup.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Custom scripts -->
-    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

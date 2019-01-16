@@ -1,11 +1,25 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Hind");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600,700");
+.nav__item {
+  display: inline-block;
+  font-family: 'Hind', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 20px; }
+  .nav__item:hover {
+    background-color: #221F1F;
+    color: #f04040;
+    transition: .3s ease; }
+
 .header {
-  padding: 50px 0;
+  padding: 150px 0;
   background: #221F1F;
   text-align: center;
-  box-shadow: 0 5px 50px #7c7c7c; }
+  box-shadow: 0 15px 40px #7c7c7c; }
   .header__title {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333333;
     font-weight: 700;
     font-size: 50px;
@@ -20,30 +34,34 @@
     border-bottom: 1px solid #d1d1d1;
     padding-bottom: .2em; }
   .plugin__link {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333333;
     font-weight: 600;
     font-size: 32px;
     text-decoration: none; }
-    .plugin__link:hover {
+    .plugin__link:hover, .plugin__link:focus {
       color: #f04040; }
-  .plugin:nth-child(odd) {
+  .plugin:focus {
+    outline: none; }
+  .plugin:nth-child(even) {
     background-color: #eeeeee; }
 
-.social__link {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #333333;
-  font-weight: 400;
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  color: #3169B3; }
-  .social__link::before {
-    margin-right: 10px; }
-  .social__link--git::before {
-    content: url("../img/icon-github.png"); }
-  .social__link:hover {
-    color: #f04040; }
+.social {
+  margin-top: 20px; }
+  .social__link {
+    font-family: 'Hind', sans-serif;
+    color: #333333;
+    font-weight: 400;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    color: #3169B3; }
+    .social__link::before {
+      margin-right: 10px; }
+    .social__link--git::before {
+      content: url("../img/icon-github.png"); }
+    .social__link:hover, .social__link:focus {
+      color: #f04040; }
 
 .zoom-gallery {
   display: flex;
@@ -81,3 +99,30 @@
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
+
+.effect {
+  width: 50%;
+  border: 0.75em solid white;
+  float: left;
+  background: rgba(0, 0, 0, 0.065);
+  box-sizing: border-box; }
+  .effects {
+    list-style: none;
+    height: 300px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    padding: 0; }
+  .effect_box {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0; }
+    .effect_box_opacity {
+      background: #606060; }
+    .effect_box_scale {
+      background: #2b82d9; }
+    .effect_box_rotate {
+      background: #d92b2b; }
+    .effect_box_translate {
+      background: #93ca3a; }

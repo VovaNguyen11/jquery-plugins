@@ -7,13 +7,12 @@
             const $this = $(this);
             const $href = $this.attr('id');
             const $name = $this.find('.plugin__link').text();
-            // $navigation.append($('<a class="navigation__item" href=#'+href+'>'+name.text()+'</a>'));
             $navigation.append($(`<a class="nav__item" href="#${$href}">${$name}</a>`));
         });
         $navigation.prependTo($('body'));
 
         //Magnific Popup
-        $('.zoom-gallery').magnificPopup({
+        $('.js-magnific-popup').magnificPopup({
             delegate: 'a',
             type: 'image',
             removalDelay: 300,
@@ -29,6 +28,59 @@
                     return e.find('img');
                 }
             }
+        });
+
+        //Isotope
+        //Inittialization
+        const $isotopeGrid = $('.js-isotope-grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            getSortData: {
+                name: '.name',
+                symbol: '.symbol',
+                number: '.number parseInt',
+                category: '[data-category]',
+                weight: function (itemElem) {
+                    const weight = $(itemElem).find('.weight').text();
+                    return parseFloat(weight.replace(/[\(\)]/g, ''));
+                }
+            }
+        });
+
+        // filter functions
+        const filterFns = {
+            // show if name ends with -ium
+            ium: function () {
+                const name = $(this).find('.name').text();
+                return name.match(/ium$/);
+            }
+        };
+
+        // bind filter button click
+        $('.js-isotope-filter').on('click', 'button', function () {
+            let filterValue = $(this).attr('data-filter');
+            // use filterFn if matches value
+            filterValue = filterFns[filterValue] || filterValue;
+            $isotopeGrid.isotope({
+                filter: filterValue
+            });
+        });
+
+        // bind sort button click
+        $('.js-isotope-sort').on('click', 'button', function () {
+            const sortByValue = $(this).attr('data-sort-by');
+            $isotopeGrid.isotope({
+                sortBy: sortByValue
+            });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each(function (i, buttonGroup) {
+            const $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function () {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
         });
 
         //AOS

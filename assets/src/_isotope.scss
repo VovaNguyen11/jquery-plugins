@@ -1,0 +1,141 @@
+.ui-group {
+    display: inline-block;
+    &__title{
+        @include font-title(20px, 700);
+        margin-top: 0;
+    }
+    .button-group {
+        display: inline-block;
+        margin-right: 20px;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .button {
+        padding: 5px 15px;
+        margin-bottom: 10px;
+        background-color: #F8F8F8;
+        background-image: linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1));
+        border: 1px solid #222;
+        float: left;
+        margin-left: -1px;
+        cursor: pointer;
+        @include font-main(18px, 400);
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+
+        &:focus {
+            outline: none
+        }
+
+        &.is-checked {
+            background-color: #19F;
+            color: white;
+        }
+    }
+
+
+}
+
+.grid {
+    border: 2px solid #484542;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .element-item {
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+
+
+        background: #888;
+        color: #262524;
+
+        &.transition {
+            background: #00ff65;
+        }
+
+        &.metalloid {
+            background: #df62f3;
+        }
+
+        &.post-transition {
+            background: #00ffff;
+        }
+
+        &.alkali {
+            background: #ff0000;
+        }
+
+        &.alkaline-earth {
+            background: #ff9900;
+        }
+
+        &.lanthanoid {
+            background: #cbff00;
+        }
+
+        &.noble-gas {
+            background: #ff0098;
+        }
+
+        &.diatomic {
+            background: #967cff;
+        }
+
+        &.actinoid {
+            background: #33ff00;
+        }
+
+        &>* {
+            margin: 0;
+            padding: 0;
+        }
+
+        .name {
+            position: absolute;
+            left: 10px;
+            top: 60px;
+            text-transform: none;
+            letter-spacing: 0;
+            @include font-main(14px, 400);
+        }
+
+        .symbol {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            @include font-main(44px, 700);
+        }
+
+        .number {
+            position: absolute;
+            right: 8px;
+            top: 5px;
+            @include font-main(14px, 700);
+        }
+
+        .weight {
+            position: absolute;
+            left: 10px;
+            top: 76px;
+            @include font-main(14px, 300);
+        }
+    }
+}

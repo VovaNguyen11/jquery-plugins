@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Hind");
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:600,700");
 .nav__item {
   display: inline-block;
@@ -99,6 +99,114 @@
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
+
+.ui-group {
+  display: inline-block; }
+  .ui-group__title {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 0; }
+  .ui-group .button-group {
+    display: inline-block;
+    margin-right: 20px; }
+    .ui-group .button-group:after {
+      content: '';
+      display: block;
+      clear: both; }
+  .ui-group .button {
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    background-color: #F8F8F8;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    border: 1px solid #222;
+    float: left;
+    margin-left: -1px;
+    cursor: pointer;
+    font-family: 'Hind', sans-serif;
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px; }
+    .ui-group .button:first-child {
+      border-radius: 5px 0 0 5px; }
+    .ui-group .button:last-child {
+      border-radius: 0 5px 5px 0; }
+    .ui-group .button:focus {
+      outline: none; }
+    .ui-group .button.is-checked {
+      background-color: #19F;
+      color: white; }
+
+.grid {
+  border: 2px solid #484542; }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .grid .element-item {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background: #888;
+    color: #262524; }
+    .grid .element-item.transition {
+      background: #00ff65; }
+    .grid .element-item.metalloid {
+      background: #df62f3; }
+    .grid .element-item.post-transition {
+      background: #00ffff; }
+    .grid .element-item.alkali {
+      background: #ff0000; }
+    .grid .element-item.alkaline-earth {
+      background: #ff9900; }
+    .grid .element-item.lanthanoid {
+      background: #cbff00; }
+    .grid .element-item.noble-gas {
+      background: #ff0098; }
+    .grid .element-item.diatomic {
+      background: #967cff; }
+    .grid .element-item.actinoid {
+      background: #33ff00; }
+    .grid .element-item > * {
+      margin: 0;
+      padding: 0; }
+    .grid .element-item .name {
+      position: absolute;
+      left: 10px;
+      top: 60px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: 'Hind', sans-serif;
+      color: #333333;
+      font-weight: 400;
+      font-size: 14px; }
+    .grid .element-item .symbol {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-family: 'Hind', sans-serif;
+      color: #333333;
+      font-weight: 700;
+      font-size: 44px; }
+    .grid .element-item .number {
+      position: absolute;
+      right: 8px;
+      top: 5px;
+      font-family: 'Hind', sans-serif;
+      color: #333333;
+      font-weight: 700;
+      font-size: 14px; }
+    .grid .element-item .weight {
+      position: absolute;
+      left: 10px;
+      top: 76px;
+      font-family: 'Hind', sans-serif;
+      color: #333333;
+      font-weight: 300;
+      font-size: 14px; }
 
 .effect {
   width: 50%;
